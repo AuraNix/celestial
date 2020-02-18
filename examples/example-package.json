@@ -1,0 +1,19 @@
+{
+    "name": "Example Package",
+    "version": "0.0.1",
+    "description": "An example package",
+    "maintainer": "AuraNix",
+
+    "source": "https://example.com/example_pkg.tar.gz",
+    "dependencies": [
+        "example-dependency"
+    ],
+
+    "build": [
+        "mkdir build_dir",
+        "cd build_dir/",
+        "make",
+        "make install",
+        "rm -rf build_dir"
+    ]
+}
