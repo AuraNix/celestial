@@ -3,7 +3,7 @@ import json
 import pathlib
 from os import chdir, chmod
 
-class Parser:
+class Parse:
     def __init__(self, pkg_template):
         self.template_dict = self.__parse(pkg_template)
         self.template_path = self.__get_pkg_template_abs_path(pkg_template)
@@ -29,7 +29,8 @@ class Parser:
         metadata = {"name": self.template_dict["name"],
                     "version": self.template_dict["version"],
                     "description": self.template_dict["description"],
-                    "maintainer": self.template_dict["maintainer"]
+                    "maintainer": self.template_dict["maintainer"],
+                    "dependencies": self.template_dict["dependencies"]
                    }
         return metadata
 
